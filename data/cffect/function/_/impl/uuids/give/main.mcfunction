@@ -26,7 +26,7 @@ execute unless data storage cffect:_ s.give[-1].definition run return -1
 scoreboard players set *give.return_count _cffect 0
 
 # each target:
-execute if data storage cffect:_ s.give[-1].in.uuids[0] run function cffect:_/impl/uuids/give/targets/each with storage cffect:_ s.give[-1].in.uuids[0]
+execute if data storage cffect:_ s.give[-1].in.uuids[0] summon snowball run function cffect:_/impl/uuids/give/targets/each
 
 
 

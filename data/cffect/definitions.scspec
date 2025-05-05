@@ -11,7 +11,7 @@ CffectDefinition := {
 CffectInstance := {
     id: CffectID
     data: any
-    ending_task: delay\TaskID
+    end_task_id: delay\TaskID
     tick? {
         enabled: bool
         command: $command
