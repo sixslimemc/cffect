@@ -1,8 +1,8 @@
 {
     this[1]: {
-        data? any
+        data: any
     }
-    duplicate[1]: {
+    instances[1]: {
         id: CffectID
         trigger: {
             start: bool

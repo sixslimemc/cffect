@@ -3,7 +3,7 @@
 # -> id: CffectID
 # -> uuids: {uuid: uuid}
 # -> duration: int
-# ~> data? any
+# => data: any = {}
 #--------------------
 # .
 #--------------------
@@ -15,6 +15,8 @@
 #--------------------
 
 data remove storage cffect:out give
+
+execute unless data storage cffect:in give.data run data merge storage cffect:in {give:{data:{}}}
 
 data modify storage cffect:_ s.give append value {}
 data modify storage cffect:_ s.give[-1].in set from storage cffect:in give
