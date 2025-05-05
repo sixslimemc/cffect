@@ -15,3 +15,19 @@
 #--------------------
 # MAIN
 
+# check duration:
+execute store result score *x _cffect run data get storage cffect:_ s.give[-1].in.duration
+execute unless score *x _cffect matches 1.. run return -2
+
+# get {..definition}:
+function cffect:_/impl/uuids/give/get_definition with storage cffect:_ s.give[-1].in
+execute unless data storage cffect:_ s.give[-1].definition run return -1
+
+scoreboard players set *give.return_count _cffect 0
+
+# each target:
+execute if data storage cffect:_ s.give[-1].in.uuids[0] run function cffect:_/impl/uuids/give/targets/each with storage cffect:_ s.give[-1].in.uuids[0]
+
+
+
+return run scoreboard players get *give.return_count _cffect
