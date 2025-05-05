@@ -20,6 +20,5 @@ CffectInstance := {
 
 EntityEntry := {
     uuid: uuid
-    guuid: guuid
     cffects[]: CffectInstance
 }

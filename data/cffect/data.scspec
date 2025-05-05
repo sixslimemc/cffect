@@ -1,4 +1,7 @@
 {
+    definitions: {
+        <CffectID...>: CffectDefinition
+    }
     entities: {
         active[]: EntityEntry
         inactive[]: EntityEntry
