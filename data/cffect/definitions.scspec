@@ -8,6 +8,18 @@ CffectDefinition := {
     duplicate_handler? $command
 }
 
+CffectInstance := {
+    id: CffectID
+    data: any
+    ending_task: delay\TaskID
+    tick? {
+        enabled: bool
+        command: $command
+    }
+}
+
 EntityEntry := {
-    
+    uuid: uuid
+    guuid: guuid
+    cffects[]: CffectInstance
 }

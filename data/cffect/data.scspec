@@ -1,0 +1,6 @@
+{
+    entities: {
+        active[]: EntityEntry
+        inactive[]: EntityEntry
+    }
+}
