@@ -1,4 +1,4 @@
-#> cffect:_/impl/uuids/give/targets/entry/cffect/prepend
+#> cffect:_/impl/uuids/give/new_cffect
 #--------------------
 # ./targets/entry/cffect/prepend
 # ./targets/entry/new
