@@ -1,0 +1,13 @@
+
+CffectID := $registryPath
+
+CffectDefinition := {
+    start? $command
+    tick? $command
+    end? $command
+    duplicate_handler? $command
+}
+
+EntityEntry := {
+    
+}

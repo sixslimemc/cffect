@@ -1,0 +1,20 @@
+{
+    this[1]: {
+        data? any
+    }
+    duplicate[1]: {
+        id: CffectID
+        trigger: {
+            start: bool
+            end: bool
+        }
+        old: {
+            data: any
+            duration: int
+        }
+        new: {
+            data: any
+            duration: int
+        }
+    }
+}
