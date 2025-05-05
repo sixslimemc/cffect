@@ -1,6 +1,6 @@
 #> cffect:_/impl/uuids/give/targets/create_delay
 #--------------------
-# ./entry/new
+# ./entry/new AS [target]
 #--------------------
 
 # IN {..create_delay.in}
@@ -13,5 +13,6 @@ data modify storage delay:in delay.ticks set from storage cffect:_ s.give[-1].cr
 data modify storage delay:in delay.data.cffect.end_command set from storage cffect:_ s.give[-1].definition.end
 data modify storage delay:in delay.data.cffect.id set from storage cffect:_ s.give[-1].in.id
 function delay:delay
+data modify storage cffect:_ s.give[-1].create_delay.out.task_id set from storage delay:out delay.task_id
+
 function delay-prt:enable
-data modify storage cffect:_ s.give[-1].create_delay.out.task_id set from storage delay:out delay.result
