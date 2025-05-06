@@ -11,6 +11,7 @@
 # ~> proper_end? true
 # iff <proper_end> then <end_command> must be specified.
 
+
 execute if data storage delay:api task.data.cffect{proper_end:true} run data modify storage cffect:_ end set from storage delay:api task.data.cffect
 
 execute store result score *x _cffect run function cffect:_/cffect_end/execute with storage cffect:_ end
