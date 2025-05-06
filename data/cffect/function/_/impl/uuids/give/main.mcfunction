@@ -23,9 +23,9 @@ execute unless score *x _cffect matches 1.. run return -2
 function cffect:_/impl/uuids/give/get_definition with storage cffect:_ s.give[-1].in
 execute unless data storage cffect:_ s.give[-1].definition run return -1
 
-scoreboard players set *give.return_count _cffect 0
+data modify storage cffect:_ s.give[-1].return_arr_len set value []
 
 # each target:
 execute if data storage cffect:_ s.give[-1].in.uuids[0] summon snowball run function cffect:_/impl/uuids/give/targets/each
 
-return run scoreboard players get *give.return_count _cffect
+return run execute if data storage cffect:_ s.give[-1].return_arr_len[]
