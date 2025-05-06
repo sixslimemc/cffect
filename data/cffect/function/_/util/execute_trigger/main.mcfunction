@@ -1,6 +1,7 @@
 #> cffect:_/util/execute_trigger/main
 
 # IN {util.execute_trigger.in}
+# % AS [target]
 # $> command: $command
 # -> data: any
 # -> uuid: uuid
