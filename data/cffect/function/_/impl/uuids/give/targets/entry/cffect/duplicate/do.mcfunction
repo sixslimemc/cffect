@@ -3,8 +3,6 @@
 # .../existing AS [target]
 #--------------------
 
-data modify storage cffect:_ s.give[-1].trigger.end set value true
-
 # get {..old_task}
 function cffect:_/impl/uuids/give/targets/entry/cffect/duplicate/get_task with storage cffect:_ s.give[-1].old_cffect
 

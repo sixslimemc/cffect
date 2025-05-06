@@ -1,2 +1,2 @@
 
-say TRIGGERED END
+say EFFECT END
