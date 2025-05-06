@@ -1,4 +1,4 @@
 {
     this[1]: InstanceHandle
-    instances[1]: DuplicateHandle
+    duplicate[1]: DuplicateHandle
 }
