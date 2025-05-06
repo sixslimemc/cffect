@@ -1,4 +1,4 @@
-#> cffect : get
+#> cffect : get : MAIN
 # % AS [target]
 #--------------------
 # -> id: CffectID
@@ -11,12 +11,5 @@
 # 1: success; [target] has cffect <id>.
 # 0: failure; [target] does not have cffect <id>.
 #--------------------
+# MAIN
 
-data remove storage cffect:out get
-
-execute store result score *x _cffect run function cffect:_/impl/get/main
-
-data remove storage cffect:_ v.get
-data remove storage cffect:in get
-
-return run scoreboard players get *x _cffect
