@@ -19,6 +19,5 @@ data remove storage cffect:in remove
 execute store result score *x _cffect run function cffect:_/impl/uuids/remove/main
 
 data remove storage cffect:_ s.remove[-1]
-scoreboard players reset *remove.return_count _cffect
 
 return run scoreboard players get *x _cffect

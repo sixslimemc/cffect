@@ -8,7 +8,7 @@ $data modify storage cffect:_ var.end.instance set from storage cffect:data enti
 $data remove storage cffect:data entities.active[{uuid:$(target)}].cffects[{id:'$(id)'}]
 
 # return if no instance:
-execute unless data storage cffect:_ var.end.instance run return fail
+execute unless data storage cffect:_ var.end.instance run return 0
 
 # cancel task if not proper end:
 execute unless data storage cffect:_ end{proper_end:true} run function cffect:_/cffect_end/cancel_task with storage cffect:_ var.end.instance
@@ -23,3 +23,4 @@ data modify storage cffect:_ util.execute_trigger.in.uuid set from storage cffec
 data modify storage cffect:_ util.execute_trigger.in.data set from storage cffect:_ var.end.instance.data
 function cffect:_/util/execute_trigger/main with storage cffect:_ util.execute_trigger.in
 
+return 1

@@ -25,6 +25,5 @@ data remove storage cffect:in give
 execute store result score *x _cffect run function cffect:_/impl/uuids/give/main
 
 data remove storage cffect:_ s.give[-1]
-scoreboard players reset *give.entry_exists _cffect
 
 return run scoreboard players get *x _cffect
