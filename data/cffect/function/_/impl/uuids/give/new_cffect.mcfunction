@@ -14,7 +14,7 @@ data modify storage cffect:_ s.give[-1].new_cffect.out.instance.id set from stor
 data modify storage cffect:_ s.give[-1].new_cffect.out.instance.data set from storage cffect:_ s.give[-1].in.data
 
 # add tick info:
-execute if data storage cffect:_ s.give[-1].definition.tick run data modify storage cffect:_ s.give[-1].new_cffect.out.instance.command set from storage cffect:_ s.give[-1].definition.tick
+execute if data storage cffect:_ s.give[-1].definition.tick run data modify storage cffect:_ s.give[-1].new_cffect.out.instance.tick.command set from storage cffect:_ s.give[-1].definition.tick
 execute if data storage cffect:_ s.give[-1].definition.tick run data modify storage cffect:_ s.give[-1].new_cffect.out.instance.tick.enabled set value true
 
 # create delay, store TaskID in end_task_id:

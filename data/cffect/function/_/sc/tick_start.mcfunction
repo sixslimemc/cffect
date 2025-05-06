@@ -3,5 +3,5 @@
 # ENTRYPOINT :: TICK
 #--------------------
 
-schedule clear cffect:_/tick
-function cffect:_/tick
+schedule clear cffect:_/tick/main
+function cffect:_/tick/main
