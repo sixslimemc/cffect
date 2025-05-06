@@ -5,7 +5,7 @@
 
 scoreboard players add *give.return_count _cffect 1
 
-$execute store success score *give.entry_exists _cffect run data modify storage cffect:_ s.give[-1].current_cffects set from storage cffect:data entities.active[{uuid:$(uuid)}].cffects
+$execute store success score *give.entry_exists _cffect run data modify storage cffect:_ s.give[-1].current_cffects set from storage cffect:data entities.active[{uuid:$(this_target)}].cffects
 
 # default trigger start:
 data modify storage cffect:_ s.give[-1].trigger.start.enable set value true
