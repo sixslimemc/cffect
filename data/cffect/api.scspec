@@ -1,20 +1,4 @@
 {
-    this[1]: {
-        data: any
-    }
-    instances[1]: {
-        id: CffectID
-        trigger: {
-            start: bool
-            end: bool
-        }
-        old: {
-            data: any
-            duration: int
-        }
-        new: {
-            data: any
-            duration: int
-        }
-    }
+    this[1]: InstanceHandle
+    instances[1]: DuplicateHandle
 }

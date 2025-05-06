@@ -18,6 +18,29 @@ CffectInstance := {
     }
 }
 
+InstanceHandle := {
+    update: bool
+    instance: {
+        data: any
+    }
+}
+
+DuplicateHandle := {
+    id: CffectID
+    trigger: {
+        start: bool
+        end: bool
+    }
+    old: {
+        data: any
+        duration: int
+    }
+    new: {
+        data: any
+        duration: int
+    }
+}
+
 EntityEntry := {
     uuid: uuid
     cffects[]: CffectInstance

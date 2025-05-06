@@ -35,7 +35,7 @@ data modify storage cffect:_ s.give[-1].trigger.end.enable set from storage cffe
 data modify storage cffect:_ s.give[-1].trigger.end.data set from storage cffect:api instances[0].old.data
 
 # trigger end:
-execute if data storage cffect:_ s.give[-1].trigger.end{enable:true} run function cffect:_/impl/uuids/give/targets/entry/cffect/duplicate/trigger_end with storage cffect:_ s.give[-1].definition
+execute if data storage cffect:_ s.give[-1].trigger.end{enable:true} run function cffect:_/impl/uuids/give/targets/entry/cffect/duplicate/trigger_end
 
 # new task:
 data modify storage cffect:_ s.give[-1].create_delay.in.ticks set from storage cffect:api instances[0].new.duration

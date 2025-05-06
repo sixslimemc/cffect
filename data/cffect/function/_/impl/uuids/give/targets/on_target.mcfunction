@@ -15,3 +15,5 @@ data modify storage cffect:_ s.give[-1].trigger.start.data set from storage cffe
 execute if score *give.entry_exists _cffect matches 1 run function cffect:_/impl/uuids/give/targets/entry/existing with storage cffect:_ s.give[-1].in
 execute if score *give.entry_exists _cffect matches 0 run function cffect:_/impl/uuids/give/targets/entry/new
 
+# trigger start:
+execute if data storage cffect:_ s.give[-1].trigger{enable:true} run function cffect:_/impl/uuids/give/targets/trigger_start
