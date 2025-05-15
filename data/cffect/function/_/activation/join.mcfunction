@@ -1,6 +1,6 @@
 #> cffect:_/activation/join
 #--------------------
-# doorman <!> on_join
+# doorman <!> join
 #--------------------
 
 $data modify storage cffect:data entities.active append from storage cffect:data entities.inactive[{uuid:$(UUID)}]
