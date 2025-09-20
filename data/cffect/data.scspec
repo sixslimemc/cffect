@@ -1,7 +1,9 @@
 
 {
-    definitions: {
-        <CffectID...>: CffectDefinition
+    definition: {
+        <$namespace...>: {
+            <($quotable << $nbtPath)...>: CffectDefinition
+        }
     }
     entities: {
         active[]: EntityEntry
