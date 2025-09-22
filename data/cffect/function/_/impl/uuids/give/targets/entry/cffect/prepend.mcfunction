@@ -4,4 +4,4 @@
 #--------------------
 
 function cffect:_/impl/uuids/give/new_cffect
-$data modify storage cffect:data entities.active[{uuid:$(uuid)}].cffects prepend from storage cffect:_ s.give[-1].new_cffect.out.instance
+$data modify storage cffect:data entities.active[{uuid:$(this_target)}].cffects prepend from storage cffect:_ s.give[-1].new_cffect.out.instance
