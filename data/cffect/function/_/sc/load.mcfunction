@@ -3,7 +3,8 @@
 
 scoreboard objectives add _cffect dummy
 
-
+# DECLARE _scores:
+# *tick_called = 0..1
 
 # DEBUG
 scoreboard players reset *init _cffect

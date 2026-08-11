@@ -47,3 +47,8 @@ struct CommonGiveIn {
 struct CommonRemoveIn {
     id: CffectId,
 }
+
+struct EntityEntry {
+    uuid: #[uuid] [int] @ 4,
+    cffects: [CffectInstance],
+}

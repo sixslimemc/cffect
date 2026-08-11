@@ -1,6 +1,8 @@
 
 use super::def::CffectDefinition
 use super::def::CffectId
+use super::def::EntityEntry
+use super::def::InstanceId
 
 dispatch minecraft:storage[cffect:data] to struct Data {
     definitions: struct Definitions {
@@ -8,5 +10,16 @@ dispatch minecraft:storage[cffect:data] to struct Data {
         map: struct DefinitionsMap {
             [CffectId]: CffectDefinition,
         },
+    },
+    entities: struct Entities {
+        active: [EntityEntry],
+        inactive: [EntityEntry],
+    },
+    technical: struct Technical {
+        tick_called: boolean,
+        end_queued: [struct EndQueuedEntry {
+            entity: #[uuid] [int] @ 4,
+            instance_id: InstanceId,
+        }],
     },
 }
