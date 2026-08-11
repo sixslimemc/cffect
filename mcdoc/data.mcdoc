@@ -1,4 +1,12 @@
 
-dispatch minecraft:storage[cffect:data] to struct Data {
+use super::def::CffectDefinition
+use super::def::CffectId
 
+dispatch minecraft:storage[cffect:data] to struct Data {
+    definitions: struct Definitions {
+        list: [CffectDefinition],
+        map: struct DefinitionsMap {
+            [CffectId]: CffectDefinition,
+        },
+    },
 }

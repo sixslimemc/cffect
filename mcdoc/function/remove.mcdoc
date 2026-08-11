@@ -1,0 +1,7 @@
+use super::super::def::CommonRemoveIn
+
+struct In {
+    ...CommonRemoveIn,
+}
+
+struct Out {}

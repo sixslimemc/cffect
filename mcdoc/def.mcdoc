@@ -1,0 +1,49 @@
+type PackId = ::slimecore::mcdoc::def::PackId
+
+// matches <pack_id>:<path>
+type CffectId = string
+// must be quotable
+type CffectRegistrationPath = string
+type StartCommand = #[command] string
+type TickCommand = #[command] string
+type EndCommand = #[command] string
+type DuplicateHandlerCommand = #[command] string
+type CffectData = any
+type InstanceId = int
+type Gametime = int
+
+struct CffectRegistrationInfo {
+    pack_id: PackId,
+    path: CffectRegistrationPath,
+}
+
+struct CffectDefinition {
+    registration: CffectRegistrationInfo,
+    id: CffectId,
+    start?: StartCommand,
+    tick?: TickCommand,
+    end?: EndCommand,
+    duplicate_handler?: DuplicateHandlerCommand,
+}
+
+struct CffectInstance {
+    id: CffectId,
+    instance_id: InstanceId,
+    data: CffectData,
+    end_time: Gametime,
+    tick?: struct {
+        enabled: true,
+        command: TickCommand,
+    },
+}
+
+struct CommonGiveIn {
+    id: CffectId,
+    duration: int,
+    // default: {}
+    data?: CffectData,
+}
+
+struct CommonRemoveIn {
+    id: CffectId,
+}

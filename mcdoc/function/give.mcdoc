@@ -1,0 +1,13 @@
+use super::super::def::CommonGiveIn
+
+struct In {
+    ...CommonGiveIn,
+}
+
+struct Out {}
+
+enum(int) Return {
+    Success = 1,
+    NoDefinitionForId = -1,
+    InvalidDuration = -2,
+}
