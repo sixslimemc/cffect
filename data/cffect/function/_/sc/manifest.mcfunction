@@ -17,7 +17,9 @@ data modify storage slimecore:in manifest.pack.display.links.info set value "htt
 data modify storage slimecore:in manifest.pack.display.links.versions set value "https://github.com/sixslimemc/cffect/releases"
 
 data modify storage slimecore:in manifest.pack.entrypoints set value []
-data modify storage slimecore:in manifest.pack.entrypoints append value {id:"tick"}
+data modify storage slimecore:in manifest.pack.entrypoints append value {id:"join_activate", after:[{id:"join_resume", pack_ref:"delay-prt"}, {id:"main", pack_ref:"doorman"}]}
+data modify storage slimecore:in manifest.pack.entrypoints append value {id:"leave_deactivate", after:[{id:"leave_pause", pack_ref:"delay-prt"}, {id:"main", pack_ref:"doorman"}]}
+data modify storage slimecore:in manifest.pack.entrypoints append value {id:"cffect_tick"}
 
 data modify storage slimecore:in manifest.pack.preload_entrypoints set value []
 data modify storage slimecore:in manifest.pack.abstract_declarations set value []
