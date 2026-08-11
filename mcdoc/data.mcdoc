@@ -1,0 +1,4 @@
+
+dispatch minecraft:storage[cffect:data] to struct Data {
+
+}

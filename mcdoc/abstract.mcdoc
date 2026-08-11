@@ -1,0 +1,8 @@
+
+dispatch minecraft:storage[cffect:abstract/in] to struct AbstractIn {
+
+}
+
+dispatch minecraft:storage[cffect:abstract/out] to struct AbstractOut {
+
+}

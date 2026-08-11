@@ -1,0 +1,8 @@
+
+dispatch minecraft:storage[cffect:in] to struct In {
+
+}
+
+dispatch minecraft:storage[cffect:out] to struct Out {
+
+}

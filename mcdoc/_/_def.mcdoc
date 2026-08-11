@@ -1,0 +1,36 @@
+
+struct VariableRegister {
+    [string]: any
+}
+dispatch minecraft:storage[cffect:_] to struct {
+    /// top level
+    t: VariableRegister,
+    /// impl
+    v: VariableRegister,
+    /// util
+    u: VariableRegister,
+    /// abstract
+    a: VariableRegister,
+    /// in-scope temp
+    x: VariableRegister,
+    // data
+    data: struct PrivateData {
+        
+    },
+    // constants
+    const: struct Constants {
+        
+    },
+    // for reentrant functions
+    eval: [struct {
+        in: any,
+        out: any,
+        v: VariableRegister,
+    }]
+}
+dispatch minecraft:storage[cffect:_/in] to struct {
+    [any]: any
+}
+dispatch minecraft:storage[cffect:_/out] to struct {
+    [any]: any
+}
