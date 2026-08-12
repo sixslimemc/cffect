@@ -1,0 +1,12 @@
+use super::super::super::def::CommonGiveIn
+use super::super::super::def::GiveReturn
+use super::super::super::def::InputTarget
+
+struct In {
+    ...CommonGiveIn,
+    targets: [InputTarget]
+}
+
+struct Out {}
+
+type Return = GiveReturn

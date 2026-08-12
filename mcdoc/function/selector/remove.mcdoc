@@ -1,0 +1,11 @@
+use super::super::super::def::CommonRemoveIn
+use super::super::super::def::ReturnSuccessCount
+
+struct In {
+    ...CommonRemoveIn,
+    selector: #[selector] string,
+}
+
+struct Out {}
+
+type Return = ReturnSuccessCount

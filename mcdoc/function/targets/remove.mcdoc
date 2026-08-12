@@ -1,0 +1,12 @@
+use super::super::super::def::CommonRemoveIn
+use super::super::super::def::ReturnSuccessCount
+use super::super::super::def::InputTarget
+
+struct In {
+    ...CommonRemoveIn,
+    targets: [InputTarget]
+}
+
+struct Out {}
+
+type Return = ReturnSuccessCount

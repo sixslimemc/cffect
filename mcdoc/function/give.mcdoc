@@ -1,4 +1,5 @@
 use super::super::def::CommonGiveIn
+use super::super::def::GiveReturn
 
 struct In {
     ...CommonGiveIn,
@@ -6,8 +7,4 @@ struct In {
 
 struct Out {}
 
-enum(int) Return {
-    Success = 1,
-    NoDefinitionForId = -1,
-    InvalidDuration = -2,
-}
+type Return = GiveReturn

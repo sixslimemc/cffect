@@ -1,0 +1,18 @@
+use super::super::def::CffectId
+use super::super::def::CffectData
+
+struct In {
+    id: CffectId,
+    // uses self if unspecified
+    target?: #[uuid] [int] @ 4,
+}
+
+struct Out {
+    duration?: int,
+    data?: CffectData,
+}
+
+enum(int) Return {
+    TargetHasCffect = 1,
+    TargetMissingCffect = 0,
+}

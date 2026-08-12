@@ -37,18 +37,29 @@ struct CffectInstance {
     },
 }
 
+struct EntityEntry {
+    uuid: #[uuid] [int] @ 4,
+    cffects: [CffectInstance],
+}
+
 struct CommonGiveIn {
     id: CffectId,
     duration: int,
     // default: {}
     data?: CffectData,
 }
+type ReturnSuccessCount = int @ 0..
+
+enum(int) GiveReturnFailure {
+    NoDefinitionForId = -1,
+    InvalidDuration = -2,
+}
+type GiveReturn = (ReturnSuccessCount | GiveReturnFailure)
 
 struct CommonRemoveIn {
     id: CffectId,
 }
 
-struct EntityEntry {
+struct InputTarget {
     uuid: #[uuid] [int] @ 4,
-    cffects: [CffectInstance],
 }
