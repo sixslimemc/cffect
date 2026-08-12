@@ -1,6 +1,6 @@
 {
   "pack": {
-    "description": "TODO: DESC",
+    "description": "Robust command-driven status effects. (Library)",
     "min_format": 101,
     "max_format": 101
   }

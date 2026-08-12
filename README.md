@@ -1,8 +1,8 @@
-# TODO: NAME | `cffect`
+# C-ffect | `cffect`
 
 **ID:** `sixslime.cffect`
 
-> TODO: DESC
+> Robust command-driven status effects.
 
 ## Description
 
