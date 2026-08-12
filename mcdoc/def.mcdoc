@@ -7,7 +7,7 @@ type CffectRegistrationPath = string
 type StartCommand = #[command] string
 type TickCommand = #[command] string
 type EndCommand = #[command] string
-type DuplicateHandlerCommand = #[command] string
+type MergeCommand = #[command] string
 type CffectData = any
 type InstanceId = int
 type Gametime = int
@@ -23,7 +23,7 @@ struct CffectDefinition {
     start?: StartCommand,
     tick?: TickCommand,
     end?: EndCommand,
-    duplicate_handler?: DuplicateHandlerCommand,
+    merge?: MergeCommand,
 }
 
 struct CffectInstance {

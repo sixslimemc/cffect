@@ -1,7 +1,30 @@
-
+use super::def::CffectData
+use super::def::CffectId
 
 dispatch minecraft:storage[cffect:api] to struct Api {
-
+    this: [struct CffectInstanceHandle {
+        update: boolean,
+        instance: struct {
+            data: CffectData,
+        },
+    }],
+    merge: [struct DuplicateHandle {
+        id: CffectId,
+        trigger: struct {
+            // default: true
+            start: boolean,
+            // default: true
+            end: boolean,
+        },
+        old: struct {
+            data: CffectData,
+            duration: int,
+        },
+        // instance is set to this after handler
+        new: struct {
+            data: CffectData,
+            duration: int,
+        },
+    }],
 }
-
 
