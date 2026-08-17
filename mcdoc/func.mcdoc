@@ -1,8 +1,14 @@
 
 dispatch minecraft:storage[cffect:in] to struct In {
-
+    register: super::function::definitions::register::In,
+    give: (super::function::give::In | super::function::selector::give::In | super::function::targets::give::In),
+    remove: (super::function::remove::In | super::function::selector::remove::In | super::function::targets::remove::In),
+    get: super::function::get::In,
 }
 
 dispatch minecraft:storage[cffect:out] to struct Out {
-
+    register: super::function::definitions::register::Out,
+    give: (super::function::give::Out | super::function::selector::give::Out | super::function::targets::give::Out),
+    remove: (super::function::remove::Out | super::function::selector::remove::Out | super::function::targets::remove::Out),
+    get: super::function::get::Out,
 }
