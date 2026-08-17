@@ -3,7 +3,7 @@ type PackId = ::slimecore::mcdoc::def::PackId
 // matches <pack_id>:<path>
 type CffectId = string
 // must be quotable
-type CffectRegistrationPath = string
+type CffectRegistrationName = string
 type StartCommand = #[command] string
 type TickCommand = #[command] string
 type EndCommand = #[command] string
@@ -14,16 +14,20 @@ type Gametime = int
 
 struct CffectRegistrationInfo {
     pack_id: PackId,
-    path: CffectRegistrationPath,
+    name: CffectRegistrationName,
+}
+
+struct CffectBody {
+    start?: StartCommand,
+    tick?: TickCommand,
+    end?: EndCommand,
+    merge?: MergeCommand,
 }
 
 struct CffectDefinition {
     registration: CffectRegistrationInfo,
     id: CffectId,
-    start?: StartCommand,
-    tick?: TickCommand,
-    end?: EndCommand,
-    merge?: MergeCommand,
+    ...CffectBody,
 }
 
 struct CffectInstance {

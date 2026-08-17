@@ -1,0 +1,17 @@
+use super::super::super::def::CffectBody
+use super::super::super::def::CffectRegistrationName
+use super::super::super::def::PackId
+
+struct In {
+    pack_id: PackId,
+    definitions: [Entry],
+}
+
+struct Entry {
+    name: CffectRegistrationName,
+    ...CffectBody,
+}
+
+struct Out {}
+
+type Return = 1

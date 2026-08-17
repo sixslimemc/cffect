@@ -1,0 +1,9 @@
+use super::super::super::def::CffectId
+
+struct In {
+    ids: [CffectId]
+}
+
+struct Out {}
+
+type Return = 1
